@@ -1,4 +1,4 @@
-package com.jimmyandiimaniar.ppb_eas.entity
+package com.jimmyandiimaniar.ppb_eas.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

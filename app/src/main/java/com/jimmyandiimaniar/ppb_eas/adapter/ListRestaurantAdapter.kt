@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.jimmyandiimaniar.ppb_eas.R
-import com.jimmyandiimaniar.ppb_eas.entity.Restaurant
+import com.jimmyandiimaniar.ppb_eas.model.Restaurant
 import kotlinx.android.synthetic.main.item_row_restaurant.view.*
 
 class ListRestaurantAdapter(private val listRestaurant: ArrayList<Restaurant>) : RecyclerView.Adapter<ListRestaurantAdapter.CardViewViewHolder>() {

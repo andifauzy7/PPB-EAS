@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jimmyandiimaniar.ppb_eas.adapter.ListRestaurantAdapter
-import com.jimmyandiimaniar.ppb_eas.entity.Restaurant
+import com.jimmyandiimaniar.ppb_eas.model.Restaurant
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
