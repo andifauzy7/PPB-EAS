@@ -8,20 +8,25 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.jimmyandiimaniar.ppb_eas.R
 import com.jimmyandiimaniar.ppb_eas.model.Restaurant
+import com.jimmyandiimaniar.ppb_eas.network.listRestaurants
 import kotlinx.android.synthetic.main.item_row_restaurant.view.*
 
-class ListRestaurantAdapter(private val listRestaurant: ArrayList<Restaurant>) : RecyclerView.Adapter<ListRestaurantAdapter.CardViewViewHolder>() {
+class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerView.Adapter<ListRestaurantAdapter.CardViewViewHolder>() {
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(restaurant: Restaurant) {
+        fun bind(restaurant: listRestaurants) {
             with(itemView) {
                 Glide.with(itemView.context)
-                    .load(restaurant.avatar)
+                    .load(restaurant.descRestaurant.thumb)
                     .apply(RequestOptions().override(100, 100))
                     .into(img_item_photo)
-                tv_restaurant.text = restaurant.name
-                tv_address.text = restaurant.address
-                tv_range.text = restaurant.averageCost.toString() + " " + restaurant.concurrency
-                tv_order_now.text = restaurant.onlineDelivery.toString()
+                tv_restaurant.text = restaurant.descRestaurant.name
+                tv_address.text = restaurant.descRestaurant.location.address
+                tv_range.text = restaurant.descRestaurant.average_cost_for_two + " " + restaurant.descRestaurant.currency
+                tv_order_now.text = if(restaurant.descRestaurant.has_online_delivery=="0"){
+                    "Belum Bisa Order Online"
+                } else {
+                    "Menerima Order Sekarang!"
+                }
             }
         }
     }
@@ -34,10 +39,10 @@ class ListRestaurantAdapter(private val listRestaurant: ArrayList<Restaurant>) :
         return CardViewViewHolder(view)
     }
 
-    override fun getItemCount(): Int = listRestaurant.size
+    override fun getItemCount(): Int = list.size
 
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
-        holder.bind(listRestaurant[position])
+        holder.bind(list[holder.adapterPosition])
     }
 
 }

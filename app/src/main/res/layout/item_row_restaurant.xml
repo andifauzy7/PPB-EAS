@@ -65,6 +65,13 @@
                 android:textSize="14sp"
                 tools:text="@string/kisaranconcurrency" />
 
+            <TextView
+                android:id="@+id/tv_order_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/ordersekarang" />
+
         </LinearLayout>
 
         <TextView
@@ -72,15 +79,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/rv_linear"
-            android:gravity="right"
+            android:gravity="center"
             android:text="4.0" />
 
-        <TextView
-            android:id="@+id/tv_order_now"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_item_photo"
-            android:gravity="right"
-            android:text="@string/ordersekarang" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
