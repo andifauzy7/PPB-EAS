@@ -26,7 +26,6 @@ class ListRestaurantAdapter(private val listRestaurant: ArrayList<Restaurant>) :
         }
     }
 
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

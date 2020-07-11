@@ -2,10 +2,19 @@ package com.jimmyandiimaniar.ppb_eas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.jimmyandiimaniar.ppb_eas.adapter.ListRestaurantAdapter
 import com.jimmyandiimaniar.ppb_eas.model.Restaurant
+import com.jimmyandiimaniar.ppb_eas.network.HomeDatasource
+import com.jimmyandiimaniar.ppb_eas.network.HomeResponse
+import com.jimmyandiimaniar.ppb_eas.network.NetworkProvider
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private val list = ArrayList<Restaurant>()
@@ -19,6 +28,18 @@ class MainActivity : AppCompatActivity() {
         list.add(restaurant)
         rv_restaurant.setHasFixedSize(true)
         showRecyclerCardView()
+
+        val datasource = NetworkProvider.providesHttpAdapter().create(HomeDatasource::class.java)
+        datasource.discoverCities().enqueue(object: Callback<HomeResponse>{
+            override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
+                Toast.makeText(getApplicationContext(), "Sukses", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onFailure(call: Call<HomeResponse>, t: Throwable) {
+                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_LONG).show()
+            }
+        })
+
     }
 
     private fun showRecyclerCardView() {
