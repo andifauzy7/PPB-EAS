@@ -1,6 +1,5 @@
 package com.jimmyandiimaniar.ppb_eas.network
 
-import android.os.Build.VERSION_CODES.BASE
 import com.jimmyandiimaniar.ppb_eas.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

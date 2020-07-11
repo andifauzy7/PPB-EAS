@@ -4,4 +4,6 @@
     <string name="alamatrestoran">Paskal Hyper Square, Jl. Pasir Kaliki No.25-27, Kb. Jeruk, Kec. Andir, Kota Bandung, Jawa Barat 40181</string>
     <string name="kisaranconcurrency">Kisaran 25.000 IDR</string>
     <string name="ordersekarang">Menerima Order Sekarang!</string>
+    <string name="rating">4.0</string>
+    <string name="daftar_restoran">Daftar Restoran</string>
 </resources>

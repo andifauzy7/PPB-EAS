@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.jimmyandiimaniar.ppb_eas.adapter.ListRestaurantAdapter
 import com.jimmyandiimaniar.ppb_eas.network.HomeDatasource
-import com.jimmyandiimaniar.ppb_eas.network.HomeResponse
+import com.jimmyandiimaniar.ppb_eas.model.restaurantFromSearch
 import com.jimmyandiimaniar.ppb_eas.network.NetworkProvider
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         val progressBar = findViewById<ProgressBar>(R.id.pb_home)
 
         val datasource = NetworkProvider.providesHttpAdapter().create(HomeDatasource::class.java)
-        datasource.discoverMovie().enqueue(object : Callback<HomeResponse> {
-            override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
+        datasource.discoverRestaurantFromSearch().enqueue(object : Callback<restaurantFromSearch> {
+            override fun onResponse(call: Call<restaurantFromSearch>, response: Response<restaurantFromSearch>) {
                 progressBar.visibility = View.GONE
                 val results = response.body()?.cities
                 val itemAdapter = findViewById<RecyclerView>(R.id.rv_restaurant)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 itemAdapter.adapter = ListRestaurantAdapter(results ?: emptyList())
             }
 
-            override fun onFailure(call: Call<HomeResponse>, t: Throwable) {
+            override fun onFailure(call: Call<restaurantFromSearch>, t: Throwable) {
                 Log.e(MainActivity::class.java.simpleName, "${t.printStackTrace()}")
             }
         })

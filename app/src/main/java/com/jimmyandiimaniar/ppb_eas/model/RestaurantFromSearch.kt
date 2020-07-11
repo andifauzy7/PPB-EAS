@@ -1,12 +1,11 @@
-package com.jimmyandiimaniar.ppb_eas.network
-
+package com.jimmyandiimaniar.ppb_eas.model
 import com.google.gson.annotations.SerializedName
 
-data class HomeResponse(
+
+data class restaurantFromSearch(
     @SerializedName("restaurants")
     val cities: List<listRestaurants>
 )
-
 data class listRestaurants(
     @SerializedName("restaurant")
     val descRestaurant: DescRestaurant
@@ -28,7 +27,7 @@ data class DescRestaurant(
     @SerializedName("thumb")
     val thumb: String,
     @SerializedName("user_rating")
-    val user_rating: user_rating,
+    val UserRating: UserRating,
 
     @SerializedName("featured_image")
     val featured_image: String,
@@ -45,7 +44,7 @@ data class Location(
     val city: String
 )
 
-data class user_rating(
+data class UserRating(
     @SerializedName("aggregate_rating")
     val aggregate_rating: String
 )

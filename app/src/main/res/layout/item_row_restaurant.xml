@@ -24,7 +24,6 @@
             android:layout_height="95dp"
             android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             tools:src="@android:color/darker_gray" />
 
         <LinearLayout
@@ -33,7 +32,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/img_item_photo"
-            android:layout_toRightOf="@id/img_item_photo"
             android:orientation="vertical">
 
             <TextView
@@ -70,7 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="@string/ordersekarang" />
+                android:text="@string/ordersekarang"
+                tools:ignore="RtlHardcoded" />
 
         </LinearLayout>
 
@@ -78,9 +77,9 @@
             android:id="@+id/tv_rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/rv_linear"
+            android:layout_toEndOf="@id/rv_linear"
             android:gravity="center"
-            android:text="4.0" />
+            android:text="@string/rating" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

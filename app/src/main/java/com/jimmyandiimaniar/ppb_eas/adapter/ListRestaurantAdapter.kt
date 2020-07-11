@@ -1,5 +1,6 @@
 package com.jimmyandiimaniar.ppb_eas.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.jimmyandiimaniar.ppb_eas.R
-import com.jimmyandiimaniar.ppb_eas.model.Restaurant
-import com.jimmyandiimaniar.ppb_eas.network.listRestaurants
+import com.jimmyandiimaniar.ppb_eas.model.listRestaurants
 import kotlinx.android.synthetic.main.item_row_restaurant.view.*
 
 class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerView.Adapter<ListRestaurantAdapter.CardViewViewHolder>() {
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        @SuppressLint("SetTextI18n")
         fun bind(restaurant: listRestaurants) {
             with(itemView) {
                 Glide.with(itemView.context)
