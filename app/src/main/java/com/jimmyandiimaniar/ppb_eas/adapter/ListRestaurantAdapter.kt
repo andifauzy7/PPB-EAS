@@ -22,12 +22,13 @@ class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerV
                     .into(img_item_photo)
                 tv_restaurant.text = restaurant.descRestaurant.name
                 tv_address.text = restaurant.descRestaurant.location.address
-                tv_range.text = restaurant.descRestaurant.average_cost_for_two + " " + restaurant.descRestaurant.currency
-                tv_order_now.text = if(restaurant.descRestaurant.has_online_delivery=="0"){
+                tv_range.text = restaurant.descRestaurant.average_cost_for_two + " " + restaurant.descRestaurant.currency + " / 2 Orang"
+                tv_order_now.text = if(restaurant.descRestaurant.has_online_delivery=="0") {
                     "Belum Bisa Order Online"
                 } else {
                     "Menerima Order Sekarang!"
                 }
+                tv_rating.text = restaurant.descRestaurant.UserRating.aggregate_rating
             }
         }
     }
