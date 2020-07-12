@@ -1,16 +1,21 @@
 package com.jimmyandiimaniar.ppb_eas.model
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-
+@Parcelize
 data class restaurantFromSearch(
     @SerializedName("restaurants")
     val cities: List<listRestaurants>
-)
+) : Parcelable
+
+@Parcelize
 data class listRestaurants(
     @SerializedName("restaurant")
     val descRestaurant: DescRestaurant
-)
+) : Parcelable
 
+@Parcelize
 data class DescRestaurant(
     @SerializedName("id")
     val id: String,
@@ -33,18 +38,26 @@ data class DescRestaurant(
     val featured_image: String,
     @SerializedName("has_online_delivery")
     val has_online_delivery: String
-)
+) : Parcelable
 
+@Parcelize
 data class Location(
     @SerializedName("address")
     val address: String,
     @SerializedName("locality")
     val locality: String,
     @SerializedName("city")
-    val city: String
-)
+    val city: String,
+    @SerializedName("latitude")
+    val latitude: String,
+    @SerializedName("longitude")
+    val longitude: String
+) : Parcelable
 
+@Parcelize
 data class UserRating(
     @SerializedName("aggregate_rating")
-    val aggregate_rating: String
-)
+    val aggregate_rating: String,
+    @SerializedName("rating_text")
+    val rating_text: String
+) : Parcelable

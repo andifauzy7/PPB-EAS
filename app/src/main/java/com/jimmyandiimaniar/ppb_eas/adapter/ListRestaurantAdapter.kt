@@ -36,7 +36,7 @@ class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerV
                 itemView.setOnClickListener { v ->
                     val context: Context = v.context
                     val intent = Intent(context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.ID_RESTAURANT, restaurant.descRestaurant.id)
+                    intent.putExtra(DetailActivity.ID_RESTAURANT, restaurant.descRestaurant)
                     context.startActivity(intent)
                 }
             }
