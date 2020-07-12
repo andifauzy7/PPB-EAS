@@ -11,5 +11,9 @@
     <string name="reviewuser">Bagus</string>
     <string name="rincian">Rincian</string>
     <string name="semuaulasan">Semua Ulasan</string>
-
+    <string name="gambar_restoran">Gambar Restoran</string>
+    <string name="gambar_rating">Gambar Rating</string>
+    <string name="gambar_order">Gambar Order Flag</string>
+    <string name="gambar_garpu">Gambar Garpu</string>
+    <string name="ulasan">Ulasan</string>
 </resources>
