@@ -1,6 +1,8 @@
 package com.jimmyandiimaniar.ppb_eas.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.jimmyandiimaniar.ppb_eas.R
+import com.jimmyandiimaniar.ppb_eas.DetailActivity
 import com.jimmyandiimaniar.ppb_eas.model.listRestaurants
 import kotlinx.android.synthetic.main.item_row_restaurant.view.*
+
 
 class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerView.Adapter<ListRestaurantAdapter.CardViewViewHolder>() {
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,6 +33,11 @@ class ListRestaurantAdapter(private val list: List<listRestaurants>) : RecyclerV
                     "Menerima Order Sekarang!"
                 }
                 tv_rating.text = restaurant.descRestaurant.UserRating.aggregate_rating
+                itemView.setOnClickListener { v ->
+                    val context: Context = v.context
+                    val intent = Intent(context, DetailActivity::class.java)
+                    context.startActivity(intent)
+                }
             }
         }
     }
