@@ -1,18 +1,27 @@
 package com.jimmyandiimaniar.ppb_eas
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class DetailActivity : AppCompatActivity() {
+    companion object {
+        const val ID_RESTAURANT = "id_restaurant"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_retaurant)
+        val id = intent.getStringExtra(ID_RESTAURANT)
+        Toast.makeText(this, id, Toast.LENGTH_LONG).show()
 
+        initiate()
+    }
+
+    fun initiate(){
         val restaurant_name = findViewById<TextView>(R.id.retaurant_name)
         restaurant_name.text = "Paskal Food Court"
         val restaurant_image = findViewById<ImageView>(R.id.retaurant_img)

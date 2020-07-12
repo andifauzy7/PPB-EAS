@@ -80,7 +80,8 @@
             android:layout_alignEnd="@id/tv_restaurant"
             android:layout_alignParentEnd="true"
             android:gravity="right"
-            android:text="@string/rating" />
+            android:text="@string/rating"
+            tools:ignore="RtlHardcoded" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

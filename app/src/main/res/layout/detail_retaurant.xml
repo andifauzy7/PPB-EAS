@@ -165,5 +165,14 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/retaurant_allreview"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_row_review" />
+
     </RelativeLayout>
 </ScrollView>
