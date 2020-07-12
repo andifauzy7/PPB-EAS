@@ -6,4 +6,10 @@
     <string name="ordersekarang">Menerima Order Sekarang!</string>
     <string name="rating">4.0</string>
     <string name="daftar_restoran">Daftar Restoran</string>
+    <string name="namauser">User</string>
+    <string name="ratinguser">4,0</string>
+    <string name="reviewuser">Bagus</string>
+    <string name="rincian">Rincian</string>
+    <string name="semuaulasan">Semua Ulasan</string>
+
 </resources>

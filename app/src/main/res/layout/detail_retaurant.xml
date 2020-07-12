@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/retaurant_img"
+        android:layout_width="411dp"
+        android:layout_height="202dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/retaurant_name"
+        android:layout_width="354dp"
+        android:layout_height="27dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_img"
+        app:layout_constraintVertical_bias="0.027"
+        tools:text="@string/namarestoran" />
+
+    <TextView
+        android:id="@+id/retaurant_detail"
+        android:layout_width="354dp"
+        android:layout_height="27dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_rating"
+        app:layout_constraintVertical_bias="0.031"
+        tools:text="@string/rincian" />
+
+    <TextView
+        android:id="@+id/retaurant_allreview"
+        android:layout_width="354dp"
+        android:layout_height="27dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_address"
+        app:layout_constraintVertical_bias="0.386"
+        tools:text="@string/semuaulasan" />
+
+    <TextView
+        android:id="@+id/retaurant_allreview2"
+        android:layout_width="296dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/user_ava"
+        app:layout_constraintTop_toTopOf="@+id/user_ava"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/namauser" />
+
+    <TextView
+        android:id="@+id/retaurant_address"
+        android:layout_width="306dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/restaurant_location_icon"
+        app:layout_constraintTop_toTopOf="@+id/restaurant_location_icon"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/alamatrestoran" />
+
+    <TextView
+        android:id="@+id/retaurant_address4"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/user_ava"
+        app:layout_constraintTop_toBottomOf="@+id/user_ava"
+        app:layout_constraintVertical_bias="0.818"
+        tools:text="@string/reviewuser" />
+
+    <TextView
+        android:id="@+id/retaurant_menu"
+        android:layout_width="306dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/retaurant_menu_icon"
+        app:layout_constraintTop_toTopOf="@+id/retaurant_menu_icon"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/kisaranconcurrency" />
+
+    <ImageView
+        android:id="@+id/restaurant_rating_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_name"
+        app:layout_constraintVertical_bias="0.045"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/retaurant_menu_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_detail"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/restaurant_location_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_menu_icon"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/user_ava"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_allreview"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/user_ava2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/user_ava"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_allreview2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/restaurant_flag_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/restaurant_rating_icon"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_name"
+        app:layout_constraintVertical_bias="0.043"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/retaurant_rating"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_rating_icon"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/rating" />
+
+    <TextView
+        android:id="@+id/retaurant_rating2"
+        android:layout_width="31dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/user_ava2"
+        app:layout_constraintTop_toBottomOf="@+id/retaurant_allreview2"
+        app:layout_constraintVertical_bias="0.121"
+        tools:text="@string/ratinguser" />
+
+    <TextView
+        android:id="@+id/restaurant_flag"
+        android:layout_width="173dp"
+        android:layout_height="24dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_flag_icon"
+        app:layout_constraintVertical_bias="0.002"
+        tools:text="@string/ordersekarang" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
