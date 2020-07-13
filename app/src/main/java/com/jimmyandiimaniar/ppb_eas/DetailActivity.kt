@@ -1,16 +1,15 @@
 package com.jimmyandiimaniar.ppb_eas
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.google.android.gms.location.FusedLocationProviderClient
 import com.jimmyandiimaniar.ppb_eas.model.DescRestaurant
-import com.jimmyandiimaniar.ppb_eas.model.restaurantFromSearch
+import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.constants.Style
+import com.mapbox.mapboxsdk.maps.MapView
 
 class DetailActivity : AppCompatActivity() {
     companion object {
@@ -28,8 +27,6 @@ class DetailActivity : AppCompatActivity() {
             val restaurant_image = findViewById<ImageView>(R.id.retaurant_img)
             Glide.with(this)
                 .load(data.featured_image)
-                .centerCrop()
-                .apply(RequestOptions().override(600, 300))
                 .into(restaurant_image)
             val retaurant_rating = findViewById<TextView>(R.id.retaurant_rating)
             retaurant_rating.text = data.UserRating.aggregate_rating
@@ -47,10 +44,12 @@ class DetailActivity : AppCompatActivity() {
             tv_address.text = data.UserRating.aggregate_rating
             val id_name2 = findViewById<TextView>(R.id.id_name2)
             id_name2.text = data.UserRating.rating_text
-
         }
 
-
+        Mapbox.getInstance(this, "pk.eyJ1IjoiYW5kaWZhdXp5NyIsImEiOiJja2Npa2o4Y2Uwa3ZhMnRvZTY4YjUwOTBuIn0.V2U0Cys-qY9IIoSCVFHu4g")
+        val mapView = findViewById(R.id.mapView) as MapView
+        mapView.setStyleUrl(Style.MAPBOX_STREETS)
+        mapView.onCreate(savedInstanceState)
     }
 
     fun initiate(){

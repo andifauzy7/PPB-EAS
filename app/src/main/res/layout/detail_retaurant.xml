@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -97,11 +98,22 @@
 
         </LinearLayout>
 
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/linear_rating"
+            mapbox:mapbox_cameraTargetLat="40.732013"
+            mapbox:mapbox_cameraTargetLng="-73.996155"
+            mapbox:mapbox_cameraTilt="60"
+            mapbox:mapbox_cameraZoom="12"
+            mapbox:mapbox_styleUrl="@string/mapbox_style_light" />
+
         <TextView
             android:id="@+id/retaurant_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linear_rating"
+            android:layout_below="@id/mapView"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
