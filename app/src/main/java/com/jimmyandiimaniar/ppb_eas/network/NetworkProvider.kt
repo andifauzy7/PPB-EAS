@@ -15,14 +15,14 @@ object NetworkProvider {
         }.build()
     }
 
-    private fun providesHttpClient(): OkHttpClient {
+    fun providesHttpClient(): OkHttpClient {
         return OkHttpClient.Builder().apply {
             retryOnConnectionFailure(true)
             addInterceptor(providesHttpLoggingInterceptor())
         }.build()
     }
 
-    private fun providesHttpLoggingInterceptor(): HttpLoggingInterceptor {
+    fun providesHttpLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
             level = when(BuildConfig.DEBUG){
                 true -> HttpLoggingInterceptor.Level.BODY
@@ -30,4 +30,6 @@ object NetworkProvider {
             }
         }
     }
+
+
 }
